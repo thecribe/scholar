@@ -25,15 +25,14 @@ export const NavLinkStyled = styled.nav`
         display: none;
         top: 20px;
         background-color: rgb(${({ theme }) => theme.color.secondary});
-        width: 200px;
+        width: 300px;
         padding: 1rem 0.5rem;
         border-radius: 3px;
 
-        li {
+        .link {
           padding: 0.5rem 1rem;
-          &:not(:last-child) {
-            margin-bottom: 1rem;
-          }
+          display: flex;
+          flex-direction: column;
         }
       }
 

@@ -4,12 +4,13 @@ const GlobalStyle = createGlobalStyle`
     *{
         margin: 0;
         padding: 0;
+        box-sizing: border-box;
     }
 
     body{
         font-family: sans-serif, Verdana, Geneva, Tahoma;
-        font-weight: 400;
-        box-sizing: border-box;
+        
+        
         background-color: rgb(${({ theme }) => theme.color.bg});
         font-size: 1rem;
         color: rgb(${({ theme }) => theme.color.text});
@@ -22,7 +23,16 @@ const GlobalStyle = createGlobalStyle`
 
     h1,h2,h3,h4,h5, p{
         margin: 1rem 0rem;
+        font-weight: 300;
+        line-height: 1.5;
     }
+
+    .section-header-text{
+        color: rgb(${({ theme }) => theme.color.accent}) ;
+        text-transform: uppercase;
+    }
+
+    
 
 `;
 
