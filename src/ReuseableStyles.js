@@ -56,3 +56,29 @@ export const ButtonStyled = styled.button`
       );
   }
 `;
+
+export const filterArray = (array, searchfield) => {
+  let newarr = [];
+  if (
+    searchfield.faculty === "default" &&
+    searchfield.department === "default"
+  ) {
+    return array;
+  } else {
+    array.forEach((e) => {
+      if (
+        searchfield.faculty === e.faculty &&
+        searchfield.department === "default"
+      ) {
+        newarr.push(e);
+      } else if (
+        searchfield.faculty === e.faculty &&
+        searchfield.department === e.department
+      ) {
+        newarr.push(e);
+      }
+    });
+  }
+
+  return newarr;
+};

@@ -1,6 +1,6 @@
 import React from "react";
 
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const NavLinks = () => {
   return (
@@ -11,33 +11,43 @@ const NavLinks = () => {
         </NavLink>
       </li>
       <li>
-        <NavLink className="link">RESEARCH</NavLink>
+        <NavLink to="research" className="link">
+          RESEARCH
+        </NavLink>
+      </li>
+      <li>
+        <NavLink to="student-arena" className="link">
+          STUDENT ARENA
+        </NavLink>
+      </li>
+      <li>
+        <NavLink to="blog" className="link">
+          BLOG
+        </NavLink>
+      </li>
+      <li>
+        <NavLink to="contact-us" className="link">
+          CONTACT US
+        </NavLink>
+      </li>
+      <li>
+        <Link className="link">OTHER LINKS</Link>
         <div className="dropdown">
-          <NavLink className="link">STAFF</NavLink>
+          <Link to="#" className="link">
+            STAFF
+          </Link>
 
-          <NavLink className="link">RESEARCH</NavLink>
+          <Link to="#" className="link">
+            RESEARCH
+          </Link>
 
-          <NavLink className="link">STUDENT ARENA</NavLink>
+          <Link to="#" className="link">
+            STUDENT ARENA
+          </Link>
 
-          <NavLink className="link">BLOG</NavLink>
-        </div>
-      </li>
-      <li>
-        <NavLink className="link">STUDENT ARENA</NavLink>
-      </li>
-      <li>
-        <NavLink className="link">BLOG</NavLink>
-      </li>
-      <li>
-        <NavLink className="link">CONTACT US</NavLink>
-        <div className="dropdown">
-          <NavLink className="link">STAFF</NavLink>
-
-          <NavLink className="link">RESEARCH</NavLink>
-
-          <NavLink className="link">STUDENT ARENA</NavLink>
-
-          <NavLink className="link">BLOG</NavLink>
+          <Link to="#" className="link">
+            BLOG
+          </Link>
         </div>
       </li>
     </ul>

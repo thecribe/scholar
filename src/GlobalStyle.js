@@ -21,6 +21,10 @@ const GlobalStyle = createGlobalStyle`
         text-decoration: none;
     }
 
+    .active{
+        color: rgb(${({ theme }) => theme.color.accent}) !important;
+    }
+
     h1,h2,h3,h4,h5, p{
         margin: 1rem 0rem;
         font-weight: 300;
