@@ -6,7 +6,9 @@ const NavLinks = () => {
   return (
     <ul>
       <li>
-        <NavLink className="link">STAFF</NavLink>
+        <NavLink to="staff" className="link">
+          STAFF
+        </NavLink>
       </li>
       <li>
         <NavLink className="link">RESEARCH</NavLink>

@@ -2,12 +2,12 @@ import React from "react";
 import { ButtonStyled, CenterDiv, ImgStyle } from "../../ReuseableStyles";
 import { NavLink } from "react-router-dom";
 
-const Staff = () => {
+const Research = () => {
   return (
     <CenterDiv className="inner-div">
       <div className="header-box">
-        <h3 className="section-header-text">Staff</h3>
-        <h2 className="header-text">Staff Repository</h2>
+        <h3 className="section-header-text">Research</h3>
+        <h2 className="header-text">Research Repository</h2>
         <p>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio
           fugiat quos obcaecati in corrupti ad maxime perspiciatis harum natus
@@ -25,4 +25,4 @@ const Staff = () => {
   );
 };
 
-export default Staff;
+export default Research;

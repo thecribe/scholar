@@ -1,11 +1,10 @@
 import React from "react";
 import { CardStyle } from "./CardStyle";
 
-const Card = ({ bg, dimension }) => {
-  console.log(dimension);
+const Card = ({ bg, dimension, padding, children }) => {
   return (
-    <CardStyle className="card" bg={bg} dimension={dimension}>
-      card
+    <CardStyle className="card" bg={bg} dimension={dimension} padding={padding}>
+      {children}
     </CardStyle>
   );
 };

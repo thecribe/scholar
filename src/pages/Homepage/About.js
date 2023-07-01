@@ -17,16 +17,34 @@ const About = () => {
       <div className="content-box">
         <Card
           bg={theme.color.primary}
-          dimension={{ width: "400px", height: "500px" }}
-        ></Card>
+          dimension={{ width: "100%", height: "100%" }}
+          padding="2rem"
+        >
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque
+          officia atque vel veritatis architecto quasi voluptatem reprehenderit
+          maxime ab iusto sequi, delectus enim? Voluptate soluta quibusdam, esse
+          sed deserunt excepturi.
+        </Card>
         <Card
           bg={theme.color.primary}
-          dimension={{ width: "400px", height: "500px" }}
-        ></Card>
+          dimension={{ width: "100%", height: "100%" }}
+          padding="2rem"
+        >
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos nostrum
+          inventore laboriosam sunt animi rerum, explicabo voluptatum totam
+          tenetur alias quibusdam quisquam hic ducimus reiciendis, voluptate
+          recusandae omnis. Perspiciatis, nihil?
+        </Card>
         <Card
           bg={theme.color.primary}
-          dimension={{ width: "400px", height: "500px" }}
-        ></Card>
+          dimension={{ width: "100%", height: "100%" }}
+          padding="2rem"
+        >
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos vero
+          blanditiis, debitis amet officiis sit facilis praesentium hic illum ut
+          maiores, nostrum modi vel, explicabo nesciunt obcaecati! Dolorem,
+          ipsam voluptatum!
+        </Card>
       </div>
     </CenterDiv>
   );

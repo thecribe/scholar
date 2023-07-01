@@ -6,8 +6,12 @@ import { useTheme } from "styled-components";
 import About from "./About";
 import Staff from "./Staff";
 import Student from "./Student";
+import Research from "./Research";
+import LatestBlog from "./LatestBlog";
+import { useLoaderData } from "react-router";
 
 const Homepage = () => {
+  const loader = useLoaderData();
   const theme = useTheme();
   const profiles = [
     {
@@ -36,6 +40,8 @@ const Homepage = () => {
     },
   ];
 
+  console.log(loader);
+
   return (
     <HomepageStyled>
       <SectionStyled className="slider">
@@ -50,14 +56,19 @@ const Homepage = () => {
       <SectionStyled padding="4rem 0rem" className="student">
         <Student />
       </SectionStyled>
-      <SectionStyled padding="10rem 0rem" className="staff">
-        <Staff />
+      <SectionStyled padding="10rem 0rem" className="research">
+        <Research />
       </SectionStyled>
-      <SectionStyled padding="4rem 0rem" className="student">
-        <Student />
+      <SectionStyled padding="4rem 0rem" className="latestblog">
+        <LatestBlog />
       </SectionStyled>
     </HomepageStyled>
   );
 };
 
 export default Homepage;
+
+export const loader = () => {
+  console.log("first laod");
+  return true;
+};
