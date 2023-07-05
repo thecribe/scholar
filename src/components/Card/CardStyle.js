@@ -4,7 +4,7 @@ export const CardStyle = styled.div`
   width: ${({ dimension }) => dimension.width};
   height: ${({ dimension }) => dimension.height};
   background-color: rgb(${({ bg }) => bg});
-  border-radius: 1rem;
+  border-radius: 0.5rem;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   padding: ${({ padding }) => padding};
 `;

@@ -1,13 +1,12 @@
 import React from "react";
 import { CenterDiv, ConfigurationStyled } from "../../ReuseableStyles";
-import SearchBox from "../../components/SearchBar/SearchBox";
 import { useState } from "react";
 import { searchArray } from "../../ExtraFunctions";
-import StaffDisplay from "./StaffDisplay";
-import SortComponent from "../../components/SortComponent/SortComponent";
 import { FaArrowRight } from "react-icons/fa";
+import SortComponent from "../../components/SortComponent/SortComponent";
+import SearchBox from "../../components/SearchBar/SearchBox";
 
-const StaffList = ({ arr }) => {
+const ResearchList = ({ arr }) => {
   const [interval, setInterval] = useState(10);
   const [input, setInput] = useState("");
   const [searchfield, setSearchFiled] = useState("");
@@ -16,7 +15,7 @@ const StaffList = ({ arr }) => {
     end: interval,
   });
 
-  const staffOutput = searchArray(arr, searchfield);
+  const output = searchArray(arr, searchfield);
 
   const sortArrHandler = (e) => {
     setSortArr({ ...sortArr, start: Number(e) * interval, end: interval });
@@ -28,9 +27,9 @@ const StaffList = ({ arr }) => {
   };
 
   return (
-    <CenterDiv className="inner-div">
+    <CenterDiv>
       <ConfigurationStyled>
-        {staffOutput.length > 0 && (
+        {output.length > 0 && (
           <div className="inner-div">
             <div className="totalCard">
               <label htmlFor="totalCardNo">Number of Profile per Page:</label>
@@ -39,7 +38,7 @@ const StaffList = ({ arr }) => {
                   type="number"
                   id="cardNumber"
                   placeholder="minValue, 5"
-                  max={staffOutput.length}
+                  max={output.length}
                   min={5}
                   onChange={(e) => setInput(e.target.value)}
                   value={input}
@@ -50,7 +49,7 @@ const StaffList = ({ arr }) => {
               </div>
 
               <SortComponent
-                arr={staffOutput}
+                arr={output}
                 sortArrFunc={(e) => sortArrHandler(e)}
                 interval={interval}
               />
@@ -62,16 +61,9 @@ const StaffList = ({ arr }) => {
           value={searchfield}
         />
       </ConfigurationStyled>
-
-      {staffOutput.length > 0 ? (
-        <StaffDisplay
-          arr={[...staffOutput].splice(sortArr.start, sortArr.end)}
-        />
-      ) : (
-        <p>No Search result</p>
-      )}
+      {output.length > 0 ? <ResearchList /> : null}
     </CenterDiv>
   );
 };
 
-export default StaffList;
+export default ResearchList;

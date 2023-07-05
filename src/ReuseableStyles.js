@@ -57,28 +57,54 @@ export const ButtonStyled = styled.button`
   }
 `;
 
-export const filterArray = (array, searchfield) => {
-  let newarr = [];
-  if (
-    searchfield.faculty === "default" &&
-    searchfield.department === "default"
-  ) {
-    return array;
-  } else {
-    array.forEach((e) => {
-      if (
-        searchfield.faculty === e.faculty &&
-        searchfield.department === "default"
-      ) {
-        newarr.push(e);
-      } else if (
-        searchfield.faculty === e.faculty &&
-        searchfield.department === e.department
-      ) {
-        newarr.push(e);
-      }
-    });
-  }
+export const ConfigurationStyled = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid rgba(${({ theme }) => theme.color.primary}, 0.1);
+  .inner-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
 
-  return newarr;
-};
+    .totalCard {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      flex: 1;
+      .action {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 150px;
+        input {
+          outline: none;
+          border: none;
+          padding: 1rem 0.3rem;
+          width: 200px;
+        }
+
+        font-size: 1rem;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+
+        .icon {
+          margin-left: 1rem;
+          background-color: rgb(${({ theme }) => theme.color.accent});
+          height: 100%;
+          padding: 0.3rem 0.3rem;
+          margin: 0.7rem;
+          color: rgb(${({ theme }) => theme.color.header_text});
+          box-shadow: rgba(0, 0, 0, 0.5) 0px 1px 4px inset;
+          transition: all 0.5s ease-in-out;
+
+          &:hover {
+            cursor: pointer;
+            transform: scale(1.03);
+          }
+        }
+      }
+    }
+  }
+`;
